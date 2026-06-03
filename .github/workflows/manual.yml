@@ -10,6 +10,3 @@ jobs:
     steps:
       - name: Print Message
         run: echo "This workflow was started manually"
-
-      - name: Print Date
-        run: date
