@@ -1,0 +1,23 @@
+name: Build Test Deploy
+
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying"
